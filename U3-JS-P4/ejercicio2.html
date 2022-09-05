@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+    <style>
+        body{
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+            text-align: center;
+            margin-top: 15%;
+            display: flex;
+            justify-content: center;
+            background-color: slategrey;
+        }
+
+        p{
+            font-size: 20px;
+            padding-top: 5px;
+        }
+
+        textarea{
+            resize: none;
+            background-color: darkgrey;
+            margin-bottom: 15px;
+        }
+
+        .caja{
+            text-align: center;
+            background-color: beige;
+            width: 320px;
+            height: 230px;
+        }
+
+        #resultado p{
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="caja">
+        <p>CONTADOR DE CARACTERES</p>
+        <textarea id="contador" cols="30" rows="5" placeholder="Escriba aquí" onkeyup="contador();"  ></textarea>
+        <div id="resultado">Caracteres totales: 0</div>
+    </div>
+
+
+    <script>
+        function contador()
+        {
+            setTimeout(function(){
+                var valor = document.getElementById('contador');
+                var cantidad = valor.value.length;
+                document.getElementById('resultado').innerHTML = 'Caracteres totales: ' + cantidad;
+            });
+        }
+    </script>
+</body>
+
+</html>

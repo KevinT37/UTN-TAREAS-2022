@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+    <style>
+        body {
+            text-align: center;
+
+            display: flex;
+            justify-content: center;
+            margin-top: 15%;
+        }
+
+        #caja1, #caja2, #caja3{
+            display: inline;
+            padding: 100px;
+            cursor: pointer;
+            margin: 20px;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div id="caja1" style="background-color: red;"></div>
+    <div id="caja2" style="background-color: green;"></div>
+    <div id="caja3" style="background-color: blue;"></div>
+
+
+    <script>
+        const caja1 = document.getElementById('caja1');
+        const caja2 = document.getElementById('caja2');
+        const caja3 = document.getElementById('caja3');
+
+        caja1.addEventListener('click', function(){
+            document.body.style.backgroundColor = 'red';
+        })
+
+        caja2.addEventListener('click', function(){
+            document.body.style.backgroundColor = 'green';
+        })
+
+        caja3.addEventListener('click', function(){
+            document.body.style.backgroundColor = 'blue';
+        })
+
+    </script>
+</body>
+
+</html>
